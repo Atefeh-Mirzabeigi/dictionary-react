@@ -13,16 +13,18 @@ function Result(props) {
               return (
                 <div className="mt-4" key={i}>
                   <h4 className="mb-1">{meaning.partOfSpeech}</h4>
-                  {meaning.definitions.map((definition, i) => {
-                    return (
-                      <div key={i}>
-                        <p className="mb-0">{definition.definition}</p>
-                        <p className="mb-0 meaning__example">
-                          {definition.example}
-                        </p>
-                      </div>
-                    );
-                  })}
+                  <ol>
+                    {meaning.definitions.map((definition, i) => {
+                      return (
+                        <li key={i} className="mt-2">
+                          <p className="mb-0">{definition.definition}</p>
+                          <p className="mb-0 meaning__example">
+                            {definition.example}
+                          </p>
+                        </li>
+                      );
+                    })}
+                  </ol>
                 </div>
               );
             })}
