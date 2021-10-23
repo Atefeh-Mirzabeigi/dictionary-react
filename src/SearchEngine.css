@@ -11,21 +11,28 @@
 .search__heading {
   color: var(--tertiary-color);
 }
-.search button {
+.search__btn {
+  margin: 0.8rem 0;
+}
+.search__btn button {
   background-color: var(--primary-color);
   border: 1px solid var(--primary-color);
   color: var(--tertiary-color);
-  padding: 0.5rem 0.8rem;
-  border-radius: 18px;
-  margin: 0.4rem;
+  padding: 0.6rem 0.9rem;
+  border-radius: 45px;
 }
-.search input {
+.search__input {
+  width: 25rem;
+  margin: 1rem;
+}
+.search__input input {
   border: 1px solid var(--primary-color);
   background: none;
-  width: 40%;
   border-radius: 18px;
-  margin: 0.4rem;
+  padding: 0.4rem;
+  padding-left: 1rem;
+  width: 100%;
 }
-.search input::placeholder {
+.search__input input::placeholder {
   color: var(--primary-color);
 }
