@@ -1,9 +1,11 @@
 import "./App.css";
-
+import DictionarySearchEngine from "./DictionarySearchEngine";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">hello world</header>
+      <div className="main-section">
+        <DictionarySearchEngine />
+      </div>
     </div>
   );
 }

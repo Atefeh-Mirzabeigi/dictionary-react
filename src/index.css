@@ -1,0 +1,14 @@
+:root {
+  --primary-color: rgb(125, 6, 51);
+  --secondary-color: rgb(49, 17, 44);
+  --tertiary-color: rgb(251, 220, 196);
+  --quaternary-color: rgb(242, 160, 123);
+}
+body {
+  background: linear-gradient(
+    -225deg,
+    rgb(125, 6, 51) 0%,
+    rgb(125, 6, 51) 50%,
+    rgb(49, 17, 44) 100%
+  );
+}
