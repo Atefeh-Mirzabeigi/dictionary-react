@@ -1,16 +1,15 @@
 import React, { useState } from "react";
 import "./SearchEngine.css";
 import axios from "axios";
+import Result from "./Result";
 
 export default function DictionarySearchEngine() {
   const [searchWord, setSearchWord] = useState(null);
-  const [newWord, setNewWord] = useState({});
+  const [newWord, setNewWord] = useState(null);
 
   function handleResponse(res) {
-    console.log(res.data);
-    setNewWord({
-      meaning: res.data.meaning,
-    });
+    console.log(res.data[0]);
+    setNewWord(res.data[0]);
   }
   function handleSubmit(event) {
     event.preventDefault();
@@ -21,9 +20,8 @@ export default function DictionarySearchEngine() {
   function handleSearch(event) {
     setSearchWord(event.target.value);
   }
-
   return (
-    <div className="SearchEngine container-fluid">
+    <div className="SearchEngine container-fluid px-0">
       <div className="search">
         <h1 className="search__heading text-center mb-0 mt-3">
           <span>Search Your</span> Word
@@ -40,6 +38,7 @@ export default function DictionarySearchEngine() {
           </div>
         </form>
       </div>
+      <Result result={newWord} />
     </div>
   );
 }

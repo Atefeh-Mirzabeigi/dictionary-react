@@ -1,8 +1,8 @@
 .SearchEngine {
   margin: 2rem 4rem;
-  padding: 2rem;
   border-radius: 20px;
   max-width: 65rem;
+  background: white;
 }
 .search {
   height: 15rem;
