@@ -8,12 +8,10 @@ export default function DictionarySearchEngine() {
   const [newWord, setNewWord] = useState(null);
 
   function handleResponse(res) {
-    console.log(res.data[0]);
     setNewWord(res.data[0]);
   }
   function handleSubmit(event) {
     event.preventDefault();
-    console.log(searchWord);
     const apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${searchWord}`;
     axios.get(apiUrl).then(handleResponse);
   }
