@@ -1,12 +1,13 @@
 import "./Result.css";
 import React from "react";
+import Synonym from "./Synonym";
 
 function Result(props) {
   if (props.result) {
     return (
       <div className="Result">
         <div className="row p-4">
-          <div className="col">
+          <div className="col-4">
             <h2 className="mb-0">{props.result.word}</h2>
             <small>[ {props.result.phonetic} ]</small>
             {props.result.meanings.map((meaning, i) => {
@@ -29,8 +30,10 @@ function Result(props) {
               );
             })}
           </div>
-          <div className="col"></div>
-          <div className="col"></div>
+          <div className="col-4">
+            <Synonym synonym={props.result.meanings} />
+          </div>
+          <div className="col-4">hi</div>
         </div>
       </div>
     );
