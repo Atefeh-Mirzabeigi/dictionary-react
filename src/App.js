@@ -1,10 +1,10 @@
 import "./App.css";
-import DictionarySearchEngine from "./DictionarySearchEngine";
+import SearchEngine from "./SearchEngine";
 function App() {
   return (
     <div className="App">
       <div className="main__section d-flex justify-content-center">
-        <DictionarySearchEngine />
+        <SearchEngine />
       </div>
       <footer className="text-center">coded by Atefeh Mirzabeigi</footer>
     </div>
