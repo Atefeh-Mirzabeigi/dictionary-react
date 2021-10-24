@@ -7,7 +7,7 @@ function Result(props) {
   if (props.result) {
     return (
       <div className="Result">
-        <div className="row p-4">
+        <div className="row result__section m-0 p-4">
           <div className="col-4">
             <h2 className="mb-0">{props.result.word}</h2>
             {props.result.phonetics.map((phonetic, i) => {

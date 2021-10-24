@@ -3,8 +3,8 @@ import "./Result.css";
 
 function Synonym(props) {
   return (
-    <div className="Synonym mt-2">
-      <h3>Synonyms</h3>
+    <div className="Synonym mt-4">
+      <h3>synonyms</h3>
       {props.synonym.map((word, i) => {
         return (
           <div className="synonym__section" key={i}>

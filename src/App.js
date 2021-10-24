@@ -3,7 +3,7 @@ import DictionarySearchEngine from "./DictionarySearchEngine";
 function App() {
   return (
     <div className="App">
-      <div className="main-section d-flex justify-content-center">
+      <div className="main__section d-flex justify-content-center">
         <DictionarySearchEngine />
       </div>
       <footer className="text-center">coded by Atefeh Mirzabeigi</footer>

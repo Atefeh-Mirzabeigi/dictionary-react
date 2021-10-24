@@ -1,3 +1,7 @@
+.result__section {
+  background: rgb(252, 244, 230);
+  border-radius: 20px;
+}
 .Result p {
   color: var(--secondary-color);
   font-size: 0.9em;
@@ -12,6 +16,7 @@ h3 {
   color: var(--quaternary-color);
   line-height: 1.2;
   font-size: 0.8em;
+  margin-top: 0.5rem;
 }
 .Result ol {
   color: rgb(165, 19, 99);
