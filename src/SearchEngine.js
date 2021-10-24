@@ -7,13 +7,24 @@ export default function DictionarySearchEngine() {
   const [searchWord, setSearchWord] = useState("sunset");
   const [newWord, setNewWord] = useState(null);
   const [loaded, setLoaded] = useState(false);
+  const [photo, setPhoto] = useState();
 
   function handleResponse(res) {
     setNewWord(res.data[0]);
   }
+  function handlePexelResoponse(res) {
+    setPhoto(res.data.photos);
+  }
   function search() {
     const apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${searchWord}`;
     axios.get(apiUrl).then(handleResponse);
+
+    const pexelApiKey =
+      "563492ad6f9170000100000116e542a46819445ca7e28c38a3ed2b2d";
+    const pexelUrl = `https://api.pexels.com/v1/search?query=${searchWord}`;
+    axios
+      .get(pexelUrl, { headers: { Authorization: `Bearer ${pexelApiKey}` } })
+      .then(handlePexelResoponse);
   }
   function handleSubmit(event) {
     event.preventDefault();
@@ -48,7 +59,7 @@ export default function DictionarySearchEngine() {
             </div>
           </form>
         </div>
-        <Result result={newWord} />
+        <Result result={newWord} photos={photo} />
       </div>
     );
   } else {

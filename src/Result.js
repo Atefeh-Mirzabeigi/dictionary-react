@@ -2,6 +2,7 @@ import "./Result.css";
 import React from "react";
 import Synonym from "./Synonym";
 import Phonetics from "./Phonetics";
+import Photos from "./Photos";
 
 function Result(props) {
   if (props.result) {
@@ -36,7 +37,9 @@ function Result(props) {
           <div className="col-4">
             <Synonym synonym={props.result.meanings} />
           </div>
-          <div className="col-4">hi</div>
+          <div className="col-4">
+            <Photos photos={props.photos} />
+          </div>
         </div>
       </div>
     );

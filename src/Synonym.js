@@ -4,7 +4,7 @@ import "./Result.css";
 function Synonym(props) {
   return (
     <div className="Synonym mt-4">
-      <h3>synonyms</h3>
+      <h4>synonyms</h4>
       {props.synonym.map((word, i) => {
         return (
           <div className="synonym__section" key={i}>
