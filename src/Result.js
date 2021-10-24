@@ -9,7 +9,7 @@ function Result(props) {
     return (
       <div className="Result">
         <div className="row result__section m-0 p-4">
-          <div className="col-4">
+          <div className="col-md-4">
             <h2 className="mb-0">{props.result.word}</h2>
             {props.result.phonetics.map((phonetic, i) => {
               return <Phonetics phonetic={phonetic} key={i} />;
@@ -34,10 +34,10 @@ function Result(props) {
               );
             })}
           </div>
-          <div className="col-4">
+          <div className="col-md-4">
             <Synonym synonym={props.result.meanings} />
           </div>
-          <div className="col-4">
+          <div className="col-md-4">
             <Photos photos={props.photos} />
           </div>
         </div>
