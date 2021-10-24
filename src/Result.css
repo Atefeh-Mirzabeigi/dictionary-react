@@ -2,15 +2,10 @@
   color: var(--secondary-color);
   font-size: 0.9em;
 }
-.Result small {
-  font-size: 0.8rem;
-  background: var(--tertiary-color);
-  color: var(--primary-color);
-  padding: 0.3rem 0.6rem;
-  border-radius: 10px;
-}
 .Result h4,
-h2 {
+h2,
+h5,
+h3 {
   color: var(--primary-color);
 }
 .Result .meaning__example {
@@ -21,4 +16,12 @@ h2 {
 .Result ol {
   color: rgb(165, 19, 99);
   padding-left: 1.2rem;
+}
+.meaning__section {
+  padding: 0.1rem 1rem;
+}
+.synonym__section {
+  background: var(--tertiary-color);
+  border-radius: 10px;
+  margin-top: 1rem;
 }

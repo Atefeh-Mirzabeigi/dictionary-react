@@ -1,0 +1,17 @@
+.Phonetics a {
+  text-decoration: none;
+  padding: 0.3rem 0.4rem;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  margin-right: 0.5rem;
+}
+.bi-soundwave {
+  color: var(--tertiary-color);
+}
+.Phonetics small {
+  font-size: 0.8rem;
+  background: var(--tertiary-color);
+  color: var(--primary-color);
+  padding: 0.3rem 0.6rem;
+  border-radius: 10px;
+}

@@ -1,16 +1,20 @@
 import React from "react";
+import "./Result.css";
 
 function Synonym(props) {
-  console.log(props.synonym);
   return (
-    <div className="Synonym">
+    <div className="Synonym mt-2">
+      <h3>Synonyms</h3>
       {props.synonym.map((word, i) => {
         return (
           <div className="synonym__section" key={i}>
-            <h5>{word.partOfSpeech}</h5>
             {word.definitions.map((syn, i) => {
               return (
-                <div key={i}>
+                <div
+                  className={syn.synonyms.length ? "px-3 py-2" : null}
+                  key={i}
+                >
+                  <h5>{syn.synonyms.length ? word.partOfSpeech : null}</h5>
                   <p>{syn.synonyms.join(", ")}</p>
                 </div>
               );

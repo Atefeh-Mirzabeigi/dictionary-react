@@ -26,7 +26,7 @@
   border: 1px solid var(--primary-color);
   color: var(--tertiary-color);
   padding: 0.6rem 0.9rem;
-  border-radius: 45px;
+  border-radius: 50%;
 }
 .search__input {
   width: 25rem;

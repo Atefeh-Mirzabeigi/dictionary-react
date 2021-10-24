@@ -1,6 +1,7 @@
 import "./Result.css";
 import React from "react";
 import Synonym from "./Synonym";
+import Phonetics from "./Phonetics";
 
 function Result(props) {
   if (props.result) {
@@ -9,10 +10,12 @@ function Result(props) {
         <div className="row p-4">
           <div className="col-4">
             <h2 className="mb-0">{props.result.word}</h2>
-            <small>[ {props.result.phonetic} ]</small>
+            {props.result.phonetics.map((phonetic, i) => {
+              return <Phonetics phonetic={phonetic} key={i} />;
+            })}
             {props.result.meanings.map((meaning, i) => {
               return (
-                <div className="mt-4" key={i}>
+                <div className="mt-4 meaning__section" key={i}>
                   <h4 className="mb-1">{meaning.partOfSpeech}</h4>
                   <ol>
                     {meaning.definitions.map((definition, i) => {
